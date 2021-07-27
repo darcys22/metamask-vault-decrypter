@@ -1,0 +1,28 @@
+{
+  "name": "Metamask Vault Decrypter",
+  "version": "1.0.0",
+  "description": "Small Code to extract a vault rather than using the GUI provided by metamask. In Chrome based browsers (Chrome, Chrome Canary, Brave) you can right-click on the extension window (or on the extension opened in Expand view in a tab: chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html) and click on 'Inspect' to open the Web Inspector, then go to the Console tab to type this command, which will show you the {'data':'gewun.......opQ==','iv':'JfVS.....==','salt':'jx4......FI='} part of the Vault directly. this can be entered in as variables in this code. If your computer has crashed and you no longer are able to use Chrome browser or if you've been able to recover your computer files using some backup software, you may still be able to get the encrypted Vault from that backup.
+
+If you were using the Google Chrome browser in Windows 10, you should be able to find the location of the Vault by going to this folder location (you need to be able to see the hidden files):
+
+C:\Users\USER_NAME\AppData\Local\Google\Chrome\User Data\Default\Local Extension Settings\nkbihfbeogaeaoehlefnkodbefgpgknn
+
+In that folder you'll see a file called 000003, open that file with a text editor or code editor software like Atom (https://atom.io/) or sublimetext.  Note: the file will not be a .txt file but likely something like a *.ldb.  The screenshot below says file type document because it was already opened with a text editor.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "^7.12.17",
+    "@babel/preset-react": "^7.12.13",
+    "browser-passworder": "^2.0.3",
+    "browserify-unibabel": "^3.0.0",
+    "buffer": "^6.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "babelify": "^10.0.0"
+  }
+}
